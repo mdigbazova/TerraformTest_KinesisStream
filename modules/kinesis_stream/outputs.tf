@@ -1,27 +1,28 @@
 output "kinesis_arn" {
   description = "The arn of the Kinesis stream"
-  value       = "${aws_kinesis.arn}"
+  value       = "${aws_kinesis_stream.kinesis_stream.arn}"
 }
 
 output "kinesis_name" {
   description = "The name of the Kinesis stream"
-  value       = "${aws_kinesis.name}"
+  value       = "${aws_kinesis_stream.kinesis_stream.name}"
 }
 
 
-output "region_id" {
+output "kinesis_id" {
+  description = "The Kinesis stream id"
+  value       = "${aws_kinesis_stream.kinesis_stream.id}"
+}
+
+output "provider" {
   description = "The region id"
-  value       = "${aws_regions.region.id}"
+  value       = "${aws_kinesis_stream.kinesis_stream.provider}"
 }
 
-output "region_name" {
+output "tags" {
   description = "The region name"
-  value       = "${aws_regions.region.region}"
+  value       = "${aws_kinesis_stream.kinesis_stream.tags}"
 }
 
-output "region_provider" {
-  description = "The region name"
-  value       = "${aws_regions.region.provider}"
-}
 
 

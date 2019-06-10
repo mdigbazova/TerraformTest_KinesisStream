@@ -8,8 +8,8 @@ locals {
     SYSTEM        = "DaVinci"
     OWNER         = "SolarWinds MSP Data Platform"
     ENV_NAME      = "${var.environment}"
-    DESCRIPTION   = "${var.description} ${var.available_sources[0]}"
-    MANAGEDBY     = "Terraform"
+    DESCRIPTION   = "Kinesis stream for project DaVinci KEA"
+    MANAGED_BY    = "Terraform"
   }
 }
 
