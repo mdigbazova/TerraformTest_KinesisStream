@@ -1,5 +1,5 @@
 provider "aws" {
-  region  = "${var.region}"
+  region              = "${var.region}"
 }
 
 
@@ -8,16 +8,15 @@ locals {
     SYSTEM        = "DaVinci"
     OWNER         = "SolarWinds MSP Data Platform"
     ENV_NAME      = "${var.environment}"
-    DESCRIPTION   = "Kinesis stream for project DaVinci KEA"
+    DESCRIPTION   = "${var.description} ${var.available_sources[0]}"
     MANAGEDBY     = "Terraform"
   }
 }
 
-resource "aws_kinesis_stream" "test_stream_encr_decr" {
+resource "aws_kinesis_stream" "kinesis_stream" {
   name             = "${var.stream_name}"
   shard_count      = "${var.shard_count}"
   retention_period = "${var.retention_period}"
-  kms_key_id       = "${var.kms_key_id}"
 
   shard_level_metrics = [
     #  A list of shard-level CloudWatch metrics which can be enabled for the stream.
@@ -27,4 +26,34 @@ resource "aws_kinesis_stream" "test_stream_encr_decr" {
 
   tags            = "${local.tags}"
 }
+
+# calling regions:
+//module "region_ap-southeast-2" {
+//  source    = "./breck/ap-southeast-2"
+//  providers = {
+//    aws = "aws.ase2"
+//  }
+//}
+//
+//module "region_eu-central-1" {
+//  source    = "./breck/eu-central-1"
+//  providers = {
+//    aws = "aws.euc1"
+//  }
+//}
+//
+//module "region_eu-west-1" {
+//  source    = "./breck/eu-west-1"
+//  providers = {
+//    aws = "aws.euw1"
+//  }
+//}
+//
+//module "region_us-west-2" {
+//  source    = "./breck/us-west-2"
+//  providers = {
+//    aws = "aws.usw2"
+//  }
+//}
+
 

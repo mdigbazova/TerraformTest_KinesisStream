@@ -5,7 +5,7 @@ output "kinesis_arn" {
 
 output "kinesis_name" {
   description = "The name of the Kinesis stream"
-  value       = "${aws_kms_alias.key_alias.name}"
+  value       = "${aws_kinesis.name}"
 }
 
 
