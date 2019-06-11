@@ -28,21 +28,16 @@ variable "region" {
   default     = "eu-west-1"
 }
 
-variable "description" {
-  description = "The description of this Kinesis stream"
-  type        = "string"
-  default     = "Kinesis stream for project DaVinci KEA, source "
-}
 
-variable "available_sources" {
-  description = "A list of available sources for which to run the scripts"
-  type = list(string)
-  default = [
-    "breck",
-    "avery",
-    "echo"
-  ]
-}
+//variable "available_sources" {
+//  description = "A list of available sources for which to run the scripts"
+//  type = list(string)
+//  default = [
+//    "breck",
+//    "avery",
+//    "echo"
+//  ]
+//}
 
 
 

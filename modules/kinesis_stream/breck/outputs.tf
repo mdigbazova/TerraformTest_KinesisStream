@@ -14,15 +14,17 @@ output "kinesis_id" {
   value       = "${aws_kinesis_stream.kinesis_stream.id}"
 }
 
-output "provider" {
-  description = "The region id"
-  value       = "${aws_kinesis_stream.kinesis_stream.provider}"
-}
+//output "provider" {
+//  description = "The region id"
+//  value       = "${aws_kinesis_stream.kinesis_stream.provider}"
+//}
 
 output "tags" {
   description = "The region name"
   value       = "${aws_kinesis_stream.kinesis_stream.tags}"
 }
+
+
 
 
 
