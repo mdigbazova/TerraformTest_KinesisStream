@@ -28,16 +28,6 @@ variable "region" {
 }
 
 
-//variable "available_sources" {
-//  description = "A list of available sources for which to run the scripts"
-//  type = list(string)
-//  default = [
-//    "breck",
-//    "avery",
-//    "echo"
-//  ]
-//}
-
 
 
 

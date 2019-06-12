@@ -4,25 +4,8 @@ variable environment { }
 variable shard_count { }
 variable retention_period { }
 
-//provider "aws" {
-//  alias       = "ase2"
-//}
-//
-//provider "aws" {
-//  alias       = "euc1"
-//}
-//
-////provider "aws" {
-////  alias = "euw1"
-////}
-//
-//provider "aws" {
-//  alias       = "usw2"
-//}
 
 provider "aws" {
-  # default provider
-  #version             = "~> 2.14"
   region              = "${var.region}"
 }
 
