@@ -29,7 +29,7 @@ module "launcher-eu-central-1" {
 module "launcher-us-west-2" {
   source              = "./breck"
   region              = "us-west-2"
-  stream_name         = "${var.stream_name}" 
+  stream_name         = "${var.stream_name}"
   environment         = "${var.environment}"
   shard_count         = "${var.shard_count}"
   retention_period    = "${var.retention_period}"
